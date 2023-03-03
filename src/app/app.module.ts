@@ -28,6 +28,12 @@ import { WelcomeComponent } from './pages/admin/welcome/welcome.component';
 import { ViewCategoriesComponent } from './pages/admin/view-categories/view-categories.component';
 import { AddCategoriesComponent } from './pages/admin/add-categories/add-categories.component';
 import {MatDividerModule} from '@angular/material/divider';
+import { ViewExamsComponent } from './pages/admin/view-exams/view-exams.component';
+import { AddExamComponent } from './pages/admin/add-exam/add-exam.component';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import {MatSelectModule} from '@angular/material/select';
+import { UpdateExamComponent } from './pages/admin/update-exam/update-exam.component';
+import { ViewQuestionsComponent } from './pages/admin/view-questions/view-questions.component';
 
 
 @NgModule({
@@ -43,7 +49,11 @@ import {MatDividerModule} from '@angular/material/divider';
     SidebarComponent,
     WelcomeComponent,
     ViewCategoriesComponent,
-    AddCategoriesComponent
+    AddCategoriesComponent,
+    ViewExamsComponent,
+    AddExamComponent,
+    UpdateExamComponent,
+    ViewQuestionsComponent
 
   ],
   imports: [
@@ -60,7 +70,9 @@ import {MatDividerModule} from '@angular/material/divider';
     MatToolbarModule,
     MatIconModule,
     MatListModule,
-    MatDividerModule
+    MatDividerModule,
+    MatSlideToggleModule,
+    MatSelectModule
 
   ],
   providers: [authInterceptorProviders],

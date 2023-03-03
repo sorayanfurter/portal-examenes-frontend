@@ -4,23 +4,29 @@
     <div class="bootstrap-wrapper">
       <div class="row">
         <div class="col-md-8 offset-md-2">
-          <form action="">
+          <form (ngSubmit)="formSubmit()">
             <mat-form-field class="w100" appearance="outline">
               <mat-label>Titulo</mat-label>
               <input
+              required
               autofocus
               type="text"
               name="titulo"
               matInput
-              placeholder="Digite el título de la categoría">
+              placeholder="Digite el título de la categoría"
+              [(ngModel)] = "categoria.titulo"
+              >
             </mat-form-field>
             <mat-form-field class="w100" appearance="outline">
               <mat-label>Descripción</mat-label>
               <textarea
+              type="text"
               name="descripcion"
               matInput
               placeholder="Digite la descripcion de la categoría"
-              rows="15">
+              rows="15"
+              [(ngModel)] = "categoria.descripcion"
+              >
               </textarea>
             </mat-form-field>
             <div class="container text-center mt15">

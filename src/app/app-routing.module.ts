@@ -1,8 +1,12 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AddCategoriesComponent } from './pages/admin/add-categories/add-categories.component';
+import { AddExamComponent } from './pages/admin/add-exam/add-exam.component';
 import { DashboardComponent } from './pages/admin/dashboard/dashboard.component';
+import { UpdateExamComponent } from './pages/admin/update-exam/update-exam.component';
 import { ViewCategoriesComponent } from './pages/admin/view-categories/view-categories.component';
+import { ViewExamsComponent } from './pages/admin/view-exams/view-exams.component';
+import { ViewQuestionsComponent } from './pages/admin/view-questions/view-questions.component';
 import { WelcomeComponent } from './pages/admin/welcome/welcome.component';
 import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
@@ -46,8 +50,24 @@ const routes: Routes = [
         component: ViewCategoriesComponent
       },
       {
-        path: ':/add-categoria',
+        path: 'add-categoria',
         component: AddCategoriesComponent
+      },
+      {
+        path: 'examenes',
+        component: ViewExamsComponent
+      },
+      {
+        path: 'add-examen',
+        component: AddExamComponent
+      },
+      {
+        path: 'examen/:examenId',
+        component: UpdateExamComponent
+      },
+      {
+        path: 'ver-preguntas/:examenId/:titulo',
+        component: ViewQuestionsComponent
       }
     ]
   },
