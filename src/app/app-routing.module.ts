@@ -2,8 +2,10 @@ import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AddCategoriesComponent } from './pages/admin/add-categories/add-categories.component';
 import { AddExamComponent } from './pages/admin/add-exam/add-exam.component';
+import { AddQuestionComponent } from './pages/admin/add-question/add-question.component';
 import { DashboardComponent } from './pages/admin/dashboard/dashboard.component';
 import { UpdateExamComponent } from './pages/admin/update-exam/update-exam.component';
+import { UpdateQuestionComponent } from './pages/admin/update-question/update-question.component';
 import { ViewCategoriesComponent } from './pages/admin/view-categories/view-categories.component';
 import { ViewExamsComponent } from './pages/admin/view-exams/view-exams.component';
 import { ViewQuestionsComponent } from './pages/admin/view-questions/view-questions.component';
@@ -12,6 +14,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { SignupComponent } from './pages/signup/signup.component';
+import { LoadExamComponent } from './pages/user/load-exam/load-exam.component';
 import { UserDashboardComponent } from './pages/user/user-dashboard/user-dashboard.component';
 import { AdminGuard } from './services/admin.guard';
 import { NormalGuard } from './services/normal.guard';
@@ -68,15 +71,29 @@ const routes: Routes = [
       {
         path: 'ver-preguntas/:examenId/:titulo',
         component: ViewQuestionsComponent
+      },
+      {
+        path: 'add-pregunta/:examenId/:titulo',
+        component: AddQuestionComponent
+      },
+      {
+        path: 'pregunta/:preguntaId',
+        component: UpdateQuestionComponent
       }
     ]
   },
   {
     path: 'user-dashboard',
     component: UserDashboardComponent,
-    pathMatch: 'full',
-    canActivate: [NormalGuard]
+    canActivate: [NormalGuard],
+    children:[
+      {
+        path: ':catId',
+        component: LoadExamComponent
+      }
+    ]
   }
+
 ];
 
 @NgModule({

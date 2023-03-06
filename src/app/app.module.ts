@@ -34,6 +34,10 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {MatSelectModule} from '@angular/material/select';
 import { UpdateExamComponent } from './pages/admin/update-exam/update-exam.component';
 import { ViewQuestionsComponent } from './pages/admin/view-questions/view-questions.component';
+import { AddQuestionComponent } from './pages/admin/add-question/add-question.component';
+import { UpdateQuestionComponent } from './pages/admin/update-question/update-question.component';
+import { SidebarComponent as UserSidebar } from './pages/user/sidebar/sidebar.component';
+import { LoadExamComponent } from './pages/user/load-exam/load-exam.component';
 
 
 @NgModule({
@@ -53,7 +57,12 @@ import { ViewQuestionsComponent } from './pages/admin/view-questions/view-questi
     ViewExamsComponent,
     AddExamComponent,
     UpdateExamComponent,
-    ViewQuestionsComponent
+    ViewQuestionsComponent,
+    AddQuestionComponent,
+    UpdateQuestionComponent,
+    UserSidebar,
+    LoadExamComponent
+
 
   ],
   imports: [
