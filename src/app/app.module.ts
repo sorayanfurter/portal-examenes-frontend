@@ -38,6 +38,8 @@ import { AddQuestionComponent } from './pages/admin/add-question/add-question.co
 import { UpdateQuestionComponent } from './pages/admin/update-question/update-question.component';
 import { SidebarComponent as UserSidebar } from './pages/user/sidebar/sidebar.component';
 import { LoadExamComponent } from './pages/user/load-exam/load-exam.component';
+import { InstructionsComponent } from './pages/user/instructions/instructions.component';
+import { StartComponent } from './pages/user/start/start.component';
 
 
 @NgModule({
@@ -61,7 +63,9 @@ import { LoadExamComponent } from './pages/user/load-exam/load-exam.component';
     AddQuestionComponent,
     UpdateQuestionComponent,
     UserSidebar,
-    LoadExamComponent
+    LoadExamComponent,
+    InstructionsComponent,
+    StartComponent
 
 
   ],

@@ -1,0 +1,8 @@
+mat-card-actions{
+  justify-content: center;
+  margin: 30px;
+}
+
+mat-card-subtitle{
+  margin-bottom: 20px;
+}

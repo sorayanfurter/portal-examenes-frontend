@@ -22,7 +22,7 @@
           </mat-card-content>
           <mat-card-actions>
             <button mat-button color="primary">Ver</button>
-            <button mat-button color="accent">Empezar</button>
+            <button mat-button color="accent" [routerLink]="'/user-dashboard/instrucciones/'+e.examenId">Empezar</button>
             <button mat-button color="accent">
               Preguntas: {{ e.numeroDePreguntas }}
             </button>

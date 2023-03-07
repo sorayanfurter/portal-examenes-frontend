@@ -1,0 +1,51 @@
+<div class="bootstrap-wrapper">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-2">
+        <!--Instrucciones-->
+        <h3>Instrucciones</h3>
+      </div>
+      <div class="col-md-8">
+        <!--Preguntas-->
+        <ng-container *ngIf="preguntas">
+          <h1 class="mt20">
+            En curso <b>{{preguntas[0].examen.titulo}}</b>
+          </h1>
+        </ng-container>
+
+        <mat-card *ngFor="let p of preguntas; let i = index">
+          <mat-card-content>
+            <p><b>{{i+1}}) </b><span [innerHTML]="p.contenido">{{p.opcion1}}</span></p>
+            <mat-divider></mat-divider>
+            <div class="row  mt20">
+              <div class="col-md-7 mt10">
+                <input type="radio" [value]="p.opcion1" [name]= "i">{{p.opcion1}}
+              </div>
+              <div class="col-md-7 mt10">
+                <input type="radio" [value]="p.opcion2" [name]= "i">{{p.opcion2}}
+              </div>
+              <div class="col-md-7 mt10">
+                <input type="radio" [value]="p.opcion3" [name]= "i">{{p.opcion3}}
+              </div>
+              <div class="col-md-7 mt10">
+                <input type="radio" [value]="p.opcion4" [name]= "i">{{p.opcion4}}
+              </div>
+            </div>
+            <div class="row">
+              <div class="col md 6">
+
+              </div>
+              <div class="col-md-6"></div>
+            </div>
+          </mat-card-content>
+        </mat-card>
+        <div class="container text-center mt20 b20">
+          <button mat-raised-button color="primary">Enviar Cuestionario</button>
+        </div>
+      </div>
+      <div class="col-md-2">
+        <!--Progreso-->
+      </div>
+    </div>
+  </div>
+</div>
