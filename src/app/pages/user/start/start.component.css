@@ -1,0 +1,8 @@
+.bootstrap-wrapper .row{
+align-content: center;
+}
+ mat-card{
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+ }

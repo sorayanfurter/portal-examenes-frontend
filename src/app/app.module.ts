@@ -40,6 +40,8 @@ import { SidebarComponent as UserSidebar } from './pages/user/sidebar/sidebar.co
 import { LoadExamComponent } from './pages/user/load-exam/load-exam.component';
 import { InstructionsComponent } from './pages/user/instructions/instructions.component';
 import { StartComponent } from './pages/user/start/start.component';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { NgxUiLoaderModule, NgxUiLoaderHttpModule } from 'ngx-ui-loader';
 
 
 @NgModule({
@@ -85,7 +87,12 @@ import { StartComponent } from './pages/user/start/start.component';
     MatListModule,
     MatDividerModule,
     MatSlideToggleModule,
-    MatSelectModule
+    MatSelectModule,
+    MatProgressSpinnerModule,
+    NgxUiLoaderModule,
+    NgxUiLoaderHttpModule.forRoot({
+      showForeground:true
+    })
 
   ],
   providers: [authInterceptorProviders],
