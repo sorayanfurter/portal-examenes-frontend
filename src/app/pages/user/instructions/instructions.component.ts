@@ -46,3 +46,11 @@ export class InstructionsComponent implements OnInit {
     })
   }
 }
+
+/*if (result.isConfirmed&& this.examenId.preguntas<0) {
+        this.router.navigate(['/start/' + this.examenId]);
+      }else{
+        Swal.fire({
+          title: 'No hay preguntas disponibles para este examen'
+        })
+      }*/

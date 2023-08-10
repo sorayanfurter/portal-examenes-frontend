@@ -10,6 +10,7 @@ import { ExamService } from 'src/app/services/exam.service';
 export class LoadExamComponent implements OnInit {
   catId: any;
   examenes: any;
+  preguntas:any;
 
   constructor(
     private route: ActivatedRoute,

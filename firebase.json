@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "dist/sistema-examenes-front-end",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

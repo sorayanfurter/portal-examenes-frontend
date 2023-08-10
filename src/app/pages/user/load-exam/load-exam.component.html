@@ -21,13 +21,18 @@
             <p>{{ e.descripcion }}</p>
           </mat-card-content>
           <mat-card-actions>
-            <button mat-button color="primary">Ver</button>
-            <button mat-button color="accent" [routerLink]="'/user-dashboard/instrucciones/'+e.examenId">Empezar</button>
-            <button mat-button color="accent">
+            <button
+              mat-button
+              color="accent"
+              [routerLink]="'/user-dashboard/instrucciones/' + e.examenId"
+            >
+              Empezar
+            </button>
+            <button mat-button color="disabled">
               Preguntas: {{ e.numeroDePreguntas }}
             </button>
-            <button mat-button color="accent">
-              P.M: {{ e.puntosMaximos }}
+            <button mat-button color="disabled">
+              P. Max.: {{ e.puntosMaximos }}
             </button>
           </mat-card-actions>
         </mat-card>

@@ -1,5 +1,5 @@
-<div class="bootstrap-wrapper" *ngIf="!esEnviado">
-  <div class="container-fluid">
+<div class="bootstrap-wrapper" *ngIf="!esEnviado" >
+  <div class="container-fluid" >
     <div class="row">
       <div class="col-md-2">
         <!--Instrucciones-->
@@ -19,13 +19,13 @@
       </div>
       <div class="col-md-7">
         <!--Preguntas-->
-        <ng-container *ngIf="preguntas">
-          <h1 class="mt20">
+        <ng-container>
+          <h1 class="mt20" *ngIf="preguntas">
             En curso <b>{{ preguntas[0].examen.titulo }}</b>
           </h1>
-        </ng-container>
+        </ng-container >
 
-        <mat-card *ngFor="let p of preguntas; let i = index">
+        <mat-card *ngFor="let p of preguntas; let i = index" >
           <mat-card-content>
             <p>
               <b>{{ i + 1 }}) </b

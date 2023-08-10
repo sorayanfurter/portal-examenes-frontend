@@ -1,5 +1,6 @@
 import { LocationStrategy } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute } from '@angular/router';
 import { PreguntaService } from 'src/app/services/pregunta.service';
 import Swal from 'sweetalert2';
@@ -22,7 +23,8 @@ export class StartComponent implements OnInit {
   constructor(
     private locationSt: LocationStrategy,
     private route: ActivatedRoute,
-    private preguntaService: PreguntaService
+    private preguntaService: PreguntaService,
+    private snack: MatSnackBar
   ) {}
 
   ngOnInit(): void {
@@ -30,7 +32,9 @@ export class StartComponent implements OnInit {
     this.examenId = this.route.snapshot.params['examenId'];
     console.log(this.examenId);
     this.cargarPreguntas();
+
   }
+
 
   cargarPreguntas() {
     this.preguntaService
@@ -39,9 +43,7 @@ export class StartComponent implements OnInit {
         (data: any) => {
           console.log(data);
           this.preguntas = data;
-
           this.timer = this.preguntas.length * 2 * 60;
-
           this.preguntas.forEach((pregunta: any) => {
             pregunta['respuestaDada'] = '';
           });
@@ -58,6 +60,7 @@ export class StartComponent implements OnInit {
         }
       );
   }
+
 
   iniciarTemporizador() {
     let t = window.setInterval(() => {

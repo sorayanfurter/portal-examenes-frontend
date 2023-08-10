@@ -6,3 +6,7 @@ align-content: center;
   align-items: center;
   justify-items: center;
  }
+
+ mat-card-actions button{
+  margin: 5px;
+}
