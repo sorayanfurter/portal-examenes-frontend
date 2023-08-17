@@ -43,7 +43,7 @@ export class LoginService {
     localStorage.removeItem('token');
     localStorage.removeItem('user');
     this.router.navigate(['']);
-    return true;
+    return false;
   }
 
   //obtenemos el token
