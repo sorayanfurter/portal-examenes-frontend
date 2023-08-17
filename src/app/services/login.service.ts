@@ -41,7 +41,7 @@ export class LoginService {
   public logout(){
     localStorage.removeItem('token');
     localStorage.removeItem('user');
-    return false;
+    return true;
   }
 
   //obtenemos el token
