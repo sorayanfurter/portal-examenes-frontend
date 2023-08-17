@@ -8,7 +8,7 @@ import { LoginService } from 'src/app/services/login.service';
   styleUrls: ['./navbar.component.css'],
 })
 export class NavbarComponent implements OnInit {
-  isLoggedIn = false;
+  isLoggedIn = true;
   user: any = null;
 
   constructor(public login: LoginService, private router: Router) {}
