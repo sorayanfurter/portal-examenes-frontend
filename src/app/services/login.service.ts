@@ -41,8 +41,7 @@ export class LoginService {
   public logout(){
     localStorage.removeItem('token');
     localStorage.removeItem('user');
-    location.href = 'https://portal-examenes.web.app';
-    return true;
+    return false;
   }
 
   //obtenemos el token
