@@ -24,8 +24,8 @@ export class NavbarComponent implements OnInit {
 
   public logout() {
     this.login.logout();
-    window.location.replace("/''");
-    window.location.reload();
+    window.location.href = 'https://portal-examenes.web.app/';
+
 
 
   }
