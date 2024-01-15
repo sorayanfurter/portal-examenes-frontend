@@ -1,5 +1,13 @@
 # SistemaExamenesFrontEnd
 
+ This application was built using Angular and Java. Designed to create and take multiple-choice exams.
+        Admins have the ability to: Create exams, add questions with their
+        respective scoring, and organize exams into distinct categories.
+        Set time constraints for users to respond.
+        Users can participate in available
+        examinations based on their permissions.
+            
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.4.
 
 ## Development server
